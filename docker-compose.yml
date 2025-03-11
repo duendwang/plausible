@@ -37,9 +37,9 @@ services:
 #    environment:
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.matomo.entrypoints=websecure"
-      - "traefik.http.routers.matomo.rule=Host(`$DOMAIN`)"
-      - "traefik.http.routers.matomo.tls.certresolver=http-challenge"
+      - "traefik.http.routers.plausible.entrypoints=websecure"
+      - "traefik.http.routers.plausible.rule=Host(`$DOMAIN`)"
+      - "traefik.http.routers.plausible.tls.certresolver=http-challenge"
     env_file:
       - plausible-conf.env
     networks:
