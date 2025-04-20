@@ -5,7 +5,7 @@ services:
     user: ${PUID:-1000}:${PGID:-1000}
     security_opt:
       - "no-new-privileges:true"
-    cap-drop:
+    cap_drop:
       - SETUID
       - SETGID
 
@@ -16,7 +16,7 @@ services:
     user: ${PUID:-1000}:${PGID:-1000}
     security_opt:
       - "no-new-privileges:true"
-    cap-drop:
+    cap_drop:
       - SETUID
       - SETGID
     volumes:
@@ -30,7 +30,7 @@ services:
     user: ${PUID:-1000}:${PGID:-1000}
     security_opt:
       - "no-new-privileges:true"
-    cap-drop:
+    cap_drop:
       - SETUID
       - SETGID
     volumes:
@@ -48,7 +48,7 @@ services:
     user: ${PUID:-1000}:${PGID:-1000}
     security_opt:
       - "no-new-privileges:true"
-    cap-drop:
+    cap_drop:
       - SETUID
       - SETGID
     command: sh -c "sleep 10 && /entrypoint.sh db createdb && /entrypoint.sh db migrate && /entrypoint.sh db init-admin && /entrypoint.sh run"
